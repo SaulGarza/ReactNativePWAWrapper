@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+  <title>Horizon Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="wzrecorder.js"></script>
+</head>
+
+<body>
+  <div class="header-wrapper">
+    <div class="header-container">
+      <img
+        src="header-logo@3x.png"
+        height="60px"
+        class="header-logo"
+        srcset="header-logo.png 1x, header-logo@2x.png 2x, header-logo@3x.png 3x"
+      />
+      <span class="flex-helper"></span>
+      <img
+        src="header-menu@3x.png"
+        height="60px"
+        class="header-menu"
+        srcset="header-menu.png 1x, header-menu@2x.png 2x, header-menu@3x.png 3x"
+      />
+    </div>
+  </div>
+  <div class="body">
+    <section>
+      <h1>Camera</h1>
+      <hr/>
+      <div class="section-content_wrapper">
+        <!-- <button onclick="getStream('video')" class="btn "> -->
+        <button class="btn btnvoice">
+          <img
+            src="camera-button@3x.png"
+            class="camera-button"
+            srcset="camera-button.png 1x, camera-button@2x.png 2x, camera-button@3x.png 3x"
+          />
+        </button>
+        <video controls autoplay style="height:100px; width: 150px;" id="video_stream"></video>
+      </div>
+      <hr/>
+    </section>
+    <section>
+        <h1>Microphone</h1>
+        <hr/>
+        <div class="section-content_wrapper">
+          <button onclick="recordAudio()" class="btn">
+            <img
+              src="microphone-button@3x.png"
+              srcset="microphone-button.png 1x, microphone-button@2x.png 2x, microphone-button@3x.png 3x"
+            />
+          </button>
+          <audio controls autoplay></audio>
+        </div>
+        <hr/>
+      </section>
+      <section>
+          <h1>Location</h1>
+          <hr/>
+          <div class="section-content_wrapper">
+            <img
+              src="location-button@3x.png"
+              class="location-button btn"
+              srcset="location-button.png 1x, location-button@2x.png 2x, location-button@3x.png 3x"
+              onclick="getLocation()"
+            />
+            <canvas id="map_pin"></canvas>
+          </div>
+          <hr/>
+        </section>
+  </div>
+  <div class="menu-container">
+
+  </div>
+</body>
+
+<script src="script.js"></script>

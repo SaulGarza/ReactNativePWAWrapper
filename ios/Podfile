@@ -1,0 +1,68 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PWAReactNativeWrapper' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for PWAReactNativeWrapper
+
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge', # Include this for RN >= 0.47
+    'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket', # Needed for debugging
+    'RCTSettings',
+    'RCTAnimation', # Needed for FlatList and animations running on native UI thread
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTVibration',
+    # Add any other subspecs you want to use in your project
+  ]
+
+   # Third party deps podspec link
+  pod 'yoga',
+    :path => "../node_modules/react-native/ReactCommon/yoga"
+  pod 'DoubleConversion',
+    :podspec => "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec",
+    :inhibit_warnings => true
+  pod 'Folly',
+    :podspec => "../node_modules/react-native/third-party-podspecs/Folly.podspec",
+    :inhibit_warnings => true
+  pod 'glog',
+    :podspec => "../node_modules/react-native/third-party-podspecs/glog.podspec",
+    :inhibit_warnings => true
+
+  pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
+
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
+  target 'PWAReactNativeWrapperTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'PWAReactNativeWrapper-tvOS' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for PWAReactNativeWrapper-tvOS
+
+  target 'PWAReactNativeWrapper-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if target.name == "React"
+      target.remove_from_project
+    end
+  end
+end
