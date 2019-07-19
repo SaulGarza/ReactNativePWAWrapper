@@ -2,12 +2,53 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>you can record audio and video using this description</string>
+	<key>WebRCTApplicationConfig</key>
+	<dict>
+		<key>domainOriginTestPattern</key>
+		<string>${DomainOriginTestPattern}</string>
+		<key>forceOfflineFullscreen</key>
+		<string>${FullscreenWhenOffline}</string>
+		<key>offlineBarStyle</key>
+		<string>${StatusBarOfflineStyle}</string>
+		<key>barStyle</key>
+		<string>${StatusBarStyle}</string>
+		<key>audioQuality</key>
+		<string>${AudioQuality}</string>
+		<key>fullscreen</key>
+		<string>${Fullscreen}</string>
+		<key>disableWebpageZoom</key>
+		<string>${DisableWebpageZoom}</string>
+		<key>pushMobileWebpageMeta</key>
+		<string>${PushMobileWebpageMeta}</string>
+		<key>enableMixedContentMode</key>
+		<string>${EnableMixedContentMode}</string>
+		<key>url</key>
+		<string>${WebRCTAdapterSettingURL}</string>
+		<key>postfix</key>
+		<dict>
+			<key>other_postfix</key>
+			<string>${UAPostfixExtraData}</string>
+			<key>version</key>
+			<string>${UAPostfixSettingVersion}</string>
+			<key>app_id</key>
+			<string>${UAPostfixSettingAppId}</string>
+		</dict>
+		<key>colors</key>
+		<dict>
+			<key>spinner</key>
+			<string>${ColorSettingLoadingSpinner}</string>
+			<key>backgroundColor</key>
+			<string>${ColorSettingStatusBar}</string>
+			<key>text</key>
+			<string>${ColorSettingErrorText}</string>
+			<key>primary</key>
+			<string>${ColorSettingPrimary}</string>
+		</dict>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>PWAReactNativeWrapper</string>
+	<string>Coop Dreams</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -19,15 +60,48 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>${UAPostfixVersion}</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This App will not access your Apple Music Library</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>This App does not utilize bluetooth peripherals</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This App will not access your Calendar</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This App will not access your Camera</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This App will not access your location when you are not using the app.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>Coop Dreams requests geolocation to provide a customized experience</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Coop Dreams needs Microphone access to record audio</string>
+	<key>NSMotionUsageDescription</key>
+	<string>This App will not access your Motion and Fitness data</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>This App will not access your Camera Roll</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This App will not access your Camera Roll</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>This App will not access Speech Recognition</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -37,28 +111,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>192.168.1.82</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-			<key>localhost</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
-	</dict>
 </dict>
 </plist>

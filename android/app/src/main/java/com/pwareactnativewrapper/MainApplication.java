@@ -3,6 +3,7 @@ package com.pwareactnativewrapper;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnim.rn.audio.ReactNativeAudioPackage;
 import com.reactnativecommunity.webview.RNCWebViewPackage;
 import com.bebnev.RNUserAgentPackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeAudioPackage(),
             new RNCWebViewPackage(),
             new RNUserAgentPackage(),
             new RNDeviceInfo()

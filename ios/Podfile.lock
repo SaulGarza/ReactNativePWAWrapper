@@ -61,6 +61,8 @@ PODS:
     - React/RCTBlob
   - ReactNativePermissions (1.1.1):
     - React
+  - RNAudio (4.3.0):
+    - React
   - yoga (0.59.9.React)
 
 DEPENDENCIES:
@@ -80,6 +82,7 @@ DEPENDENCIES:
   - React/RCTVibration (from `../node_modules/react-native`)
   - React/RCTWebSocket (from `../node_modules/react-native`)
   - ReactNativePermissions (from `../node_modules/react-native-permissions`)
+  - RNAudio (from `../node_modules/react-native-audio`)
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -99,6 +102,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-webview"
   ReactNativePermissions:
     :path: "../node_modules/react-native-permissions"
+  RNAudio:
+    :path: "../node_modules/react-native-audio"
   yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -110,8 +115,9 @@ SPEC CHECKSUMS:
   React: a86b92f00edbe1873a63e4a212c29b7a7ad5224f
   react-native-webview: 5036ed4a973ad1deeeff118262d2df7b60b3419d
   ReactNativePermissions: b64e084dff6a5cad51587d38c306f09246246384
+  RNAudio: cae2991f2dccb75163f260b60da8051717b959fa
   yoga: 03ff42a6f223fb88deeaed60249020d80c3091ee
 
-PODFILE CHECKSUM: 21b8811c5240c3203eb115d0cf09c1133765c95f
+PODFILE CHECKSUM: 8fa8d3c2be1897aedf2c83c35b69d30f91f18592
 
 COCOAPODS: 1.7.1

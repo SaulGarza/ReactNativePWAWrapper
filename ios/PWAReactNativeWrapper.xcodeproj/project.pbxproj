@@ -45,6 +45,9 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		C70F4B6022BAE12700F63EF8 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		C70F4BDA22BAE30E00F63EF8 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		C79DF4B722E15FC2000AFAE0 /* offline_image.png in Resources */ = {isa = PBXBuildFile; fileRef = C79DF4B422E15FC2000AFAE0 /* offline_image.png */; };
+		C79DF4B822E15FC2000AFAE0 /* offline_image@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C79DF4B522E15FC2000AFAE0 /* offline_image@3x.png */; };
+		C79DF4B922E15FC2000AFAE0 /* offline_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C79DF4B622E15FC2000AFAE0 /* offline_image@2x.png */; };
 		E3237D7FFF85F92CA34AD37E /* libPods-PWAReactNativeWrapperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C70C0362A950844B7F4DA9 /* libPods-PWAReactNativeWrapperTests.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -388,6 +391,9 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B5CCA234CA5A9C15A30FD96C /* Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOSTests/Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C119E182C93B4226193A99CE /* Pods-PWAReactNativeWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper/Pods-PWAReactNativeWrapper.release.xcconfig"; sourceTree = "<group>"; };
+		C79DF4B422E15FC2000AFAE0 /* offline_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline_image.png; sourceTree = "<group>"; };
+		C79DF4B522E15FC2000AFAE0 /* offline_image@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offline_image@3x.png"; sourceTree = "<group>"; };
+		C79DF4B622E15FC2000AFAE0 /* offline_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offline_image@2x.png"; sourceTree = "<group>"; };
 		C880A8CD690EEA80B2D123C9 /* Pods-PWAReactNativeWrapper-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOS.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOS/Pods-PWAReactNativeWrapper-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		D3CF924B83DFED13A99D5546 /* Pods-PWAReactNativeWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper.debug.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper/Pods-PWAReactNativeWrapper.debug.xcconfig"; sourceTree = "<group>"; };
 		D6E44B13B2954DD6AE5D57B2 /* RNUserAgent.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNUserAgent.xcodeproj; path = "../node_modules/react-native-user-agent/ios/RNUserAgent.xcodeproj"; sourceTree = "<group>"; };
@@ -411,9 +417,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
+				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
-				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -422,7 +429,6 @@
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
-				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				2BD8810F466748E292B0B578 /* libRNDeviceInfo.a in Frameworks */,
 				AC1D66C82C1B63627F0C63EA /* libPods-PWAReactNativeWrapper.a in Frameworks */,
 				2C5B4494F9C64D29B6EE512A /* libRNUserAgent.a in Frameworks */,
@@ -655,6 +661,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				C79DF4B322E15FC2000AFAE0 /* assets */,
 				13B07FAE1A68108700A75B9A /* PWAReactNativeWrapper */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PWAReactNativeWrapperTests */,
@@ -713,6 +720,17 @@
 				C757CC4422CA96C5000F40E6 /* libRNUserAgent.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C79DF4B322E15FC2000AFAE0 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				C79DF4B422E15FC2000AFAE0 /* offline_image.png */,
+				C79DF4B522E15FC2000AFAE0 /* offline_image@3x.png */,
+				C79DF4B622E15FC2000AFAE0 /* offline_image@2x.png */,
+			);
+			name = assets;
+			path = ../src/assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1199,6 +1217,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				C79DF4B722E15FC2000AFAE0 /* offline_image.png in Resources */,
+				C79DF4B822E15FC2000AFAE0 /* offline_image@3x.png in Resources */,
+				C79DF4B922E15FC2000AFAE0 /* offline_image@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1471,9 +1492,14 @@
 			baseConfigurationReference = D3CF924B83DFED13A99D5546 /* Pods-PWAReactNativeWrapper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AudioQuality = Low;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = SL9WL2F89D;
+				DisableWebpageZoom = YES;
+				DomainOriginTestPattern = herokuapp;
+				Fullscreen = YES;
+				FullscreenWhenOffline = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
@@ -1486,8 +1512,14 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				OfflineLoadType = image;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.horizonsystems";
 				PRODUCT_NAME = PWAReactNativeWrapper;
+				PushMobileWebpageMeta = YES;
+				StatusBarOfflineStyle = "";
+				StatusBarStyle = "light-content";
+				UAPostfixExtraData = "";
+				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1497,8 +1529,13 @@
 			baseConfigurationReference = C119E182C93B4226193A99CE /* Pods-PWAReactNativeWrapper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AudioQuality = Medium;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SL9WL2F89D;
+				DisableWebpageZoom = YES;
+				DomainOriginTestPattern = "";
+				Fullscreen = YES;
+				FullscreenWhenOffline = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
@@ -1511,8 +1548,14 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				OfflineLoadType = image;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.horizonsystems";
 				PRODUCT_NAME = PWAReactNativeWrapper;
+				PushMobileWebpageMeta = YES;
+				StatusBarOfflineStyle = "";
+				StatusBarStyle = "light-content";
+				UAPostfixExtraData = "";
+				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1696,8 +1739,13 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ColorSettingErrorText = "#CA5107";
+				ColorSettingLoadingSpinner = "#CA5107";
+				ColorSettingPrimary = "#EFE39F";
+				ColorSettingStatusBar = "#CA5107";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EnableMixedContentMode = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1717,6 +1765,10 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				UAPostfixSettingAppId = CoopDreams;
+				UAPostfixSettingBuildVersion = 3;
+				UAPostfixSettingVersion = 0.4;
+				WebRCTAdapterSettingURL = "https://dazzling-zion-32119.herokuapp.com";
 			};
 			name = Debug;
 		};
@@ -1749,8 +1801,13 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ColorSettingErrorText = "#CA5107";
+				ColorSettingLoadingSpinner = "#CA5107";
+				ColorSettingPrimary = "#EFE39F";
+				ColorSettingStatusBar = "#CA5107";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EnableMixedContentMode = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1762,7 +1819,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				UAPostfixSettingAppId = CoopDreams;
+				UAPostfixSettingBuildVersion = 3;
+				UAPostfixSettingVersion = 0.4;
 				VALIDATE_PRODUCT = YES;
+				WebRCTAdapterSettingURL = "https://coopdreams.getvoxi.app";
 			};
 			name = Release;
 		};
