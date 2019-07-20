@@ -6,8 +6,12 @@ target 'PWAReactNativeWrapper' do
   # use_frameworks!
 
   # Pods for PWAReactNativeWrapper
+  rn_path = '../node_modules/react-native'
 
-  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+  # Third party deps podspec link
+  pod 'yoga', :path => "#{rn_path}/ReactCommon/yoga"
+
+  pod 'React', :path => rn_path, :subspecs => [
     'Core',
     'CxxBridge', # Include this for RN >= 0.47
     'DevSupport', # Include this to enable In-App Devmenu if RN >= 0.43
@@ -22,17 +26,14 @@ target 'PWAReactNativeWrapper' do
     # Add any other subspecs you want to use in your project
   ]
 
-   # Third party deps podspec link
-  pod 'yoga',
-    :path => "../node_modules/react-native/ReactCommon/yoga"
   pod 'DoubleConversion',
-    :podspec => "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec",
+    :podspec => "#{rn_path}/third-party-podspecs/DoubleConversion.podspec",
     :inhibit_warnings => true
   pod 'Folly',
-    :podspec => "../node_modules/react-native/third-party-podspecs/Folly.podspec",
+    :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec",
     :inhibit_warnings => true
   pod 'glog',
-    :podspec => "../node_modules/react-native/third-party-podspecs/glog.podspec",
+    :podspec => "#{rn_path}/third-party-podspecs/glog.podspec",
     :inhibit_warnings => true
 
   pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
@@ -62,7 +63,17 @@ target 'PWAReactNativeWrapper-tvOS' do
 end
 
 post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    if config.name == 'Staging'
+        config.build_settings['CONFIGURATION_BUILD_DIR'] = '$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)'
+    end
+  end
   installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if config.name == 'Staging'
+          config.build_settings['PODS_CONFIGURATION_BUILD_DIR'] = '${PODS_BUILD_DIR}/Release$(EFFECTIVE_PLATFORM_NAME)'
+      end
+    end
     targets_to_ignore = %w(React yoga)
       
       if targets_to_ignore.include? target.name

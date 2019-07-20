@@ -28,10 +28,25 @@
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
+    "react-native-schemes-manager": "^2.0.0",
     "react-test-renderer": "16.8.3",
     "typescript": "^3.5.2"
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "xcodeSchemes": {
+		"Debug": ["Debug"],
+		"Release": ["Staging", "Release"],
+		"projectDirectory": "iOS",
+		"settings": {
+			"fix-script": {
+				"env": {
+					"NODE_BINARY": "/usr/bin/node6",
+					"LOGGING_LEVEL": "4"
+				},
+				"nodeCommand": "$NODE_BINARY ../node_modules/@sentry/cli/bin/sentry-cli react-native xcode"
+			}
+		}
+	}
 }

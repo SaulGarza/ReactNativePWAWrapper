@@ -387,10 +387,14 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		9F9DEC44ABB3C9F6E00D3ED2 /* Pods-PWAReactNativeWrapper-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOS/Pods-PWAReactNativeWrapper-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A4E3809642AD50F165562B97 /* Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOSTests/Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig"; sourceTree = "<group>"; };
+		A5DAED5911E18ED4AED7DE06 /* Pods-PWAReactNativeWrapperTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapperTests.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapperTests/Pods-PWAReactNativeWrapperTests.staging.xcconfig"; sourceTree = "<group>"; };
+		A7B4832DD6E2642DEE0875BA /* Pods-PWAReactNativeWrapper-tvOS.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOS.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOS/Pods-PWAReactNativeWrapper-tvOS.staging.xcconfig"; sourceTree = "<group>"; };
 		ACEAD1E0BF55A9158242E404 /* libPods-PWAReactNativeWrapper-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PWAReactNativeWrapper-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B5CCA234CA5A9C15A30FD96C /* Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOSTests/Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C119E182C93B4226193A99CE /* Pods-PWAReactNativeWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper/Pods-PWAReactNativeWrapper.release.xcconfig"; sourceTree = "<group>"; };
+		C42D6892E202FDCFA0A9D500 /* Pods-PWAReactNativeWrapper.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper/Pods-PWAReactNativeWrapper.staging.xcconfig"; sourceTree = "<group>"; };
 		C79DF4B422E15FC2000AFAE0 /* offline_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline_image.png; sourceTree = "<group>"; };
 		C79DF4B522E15FC2000AFAE0 /* offline_image@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offline_image@3x.png"; sourceTree = "<group>"; };
 		C79DF4B622E15FC2000AFAE0 /* offline_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offline_image@2x.png"; sourceTree = "<group>"; };
@@ -592,6 +596,10 @@
 				B5CCA234CA5A9C15A30FD96C /* Pods-PWAReactNativeWrapper-tvOSTests.release.xcconfig */,
 				1128EB59A928D1E75DA5EF0A /* Pods-PWAReactNativeWrapperTests.debug.xcconfig */,
 				18FF62945A60D3CA97B2478B /* Pods-PWAReactNativeWrapperTests.release.xcconfig */,
+				C42D6892E202FDCFA0A9D500 /* Pods-PWAReactNativeWrapper.staging.xcconfig */,
+				A7B4832DD6E2642DEE0875BA /* Pods-PWAReactNativeWrapper-tvOS.staging.xcconfig */,
+				A4E3809642AD50F165562B97 /* Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig */,
+				A5DAED5911E18ED4AED7DE06 /* Pods-PWAReactNativeWrapperTests.staging.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1253,7 +1261,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		1032C5316B41BCBE4CEE5BDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1436,6 +1444,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-user-agent/ios",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)/include",
 				);
 				INFOPLIST_FILE = PWAReactNativeWrapperTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1445,6 +1454,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1467,6 +1477,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-user-agent/ios",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)/include",
 				);
 				INFOPLIST_FILE = PWAReactNativeWrapperTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1476,6 +1487,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -1533,7 +1545,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SL9WL2F89D;
 				DisableWebpageZoom = YES;
-				DomainOriginTestPattern = "";
+				DomainOriginTestPattern = "https://coopdreams.getvoxi.app";
 				Fullscreen = YES;
 				FullscreenWhenOffline = YES;
 				HEADER_SEARCH_PATHS = (
@@ -1827,6 +1839,224 @@
 			};
 			name = Release;
 		};
+		C738A28622E38D63001CB5B2 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = YES;
+				ColorSettingErrorText = "#CA5107";
+				ColorSettingLoadingSpinner = "#CA5107";
+				ColorSettingPrimary = "#EFE39F";
+				ColorSettingStatusBar = "#CA5107";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EnableMixedContentMode = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				UAPostfixSettingAppId = CoopDreams;
+				UAPostfixSettingBuildVersion = 3;
+				UAPostfixSettingVersion = 0.4;
+				VALIDATE_PRODUCT = YES;
+				WebRCTAdapterSettingURL = "https://coopdreams.getvoxi.app";
+			};
+			name = Staging;
+		};
+		C738A28722E38D63001CB5B2 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C42D6892E202FDCFA0A9D500 /* Pods-PWAReactNativeWrapper.staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				AudioQuality = Low;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SL9WL2F89D;
+				DisableWebpageZoom = YES;
+				DomainOriginTestPattern = "https://demo.getvoxi.app";
+				Fullscreen = YES;
+				FullscreenWhenOffline = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-user-agent/ios",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)/include",
+				);
+				INFOPLIST_FILE = PWAReactNativeWrapper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/DoubleConversion\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Folly\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RNAudio\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/React\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ReactNativePermissions\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/glog\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/react-native-webview\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/yoga\"",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				OfflineLoadType = image;
+				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/Release$(EFFECTIVE_PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.horizonsystems";
+				PRODUCT_NAME = PWAReactNativeWrapper;
+				PushMobileWebpageMeta = YES;
+				StatusBarOfflineStyle = "";
+				StatusBarStyle = "light-content";
+				UAPostfixExtraData = "";
+				UAPostfixSettingVersion = 0.5;
+				VERSIONING_SYSTEM = "apple-generic";
+				WebRCTAdapterSettingURL = "https://demo.getvoxi.app";
+			};
+			name = Staging;
+		};
+		C738A28822E38D63001CB5B2 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5DAED5911E18ED4AED7DE06 /* Pods-PWAReactNativeWrapperTests.staging.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = SL9WL2F89D;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-user-agent/ios",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)/include",
+				);
+				INFOPLIST_FILE = PWAReactNativeWrapperTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PWAReactNativeWrapper.app/PWAReactNativeWrapper";
+			};
+			name = Staging;
+		};
+		C738A28922E38D63001CB5B2 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7B4832DD6E2642DEE0875BA /* Pods-PWAReactNativeWrapper-tvOS.staging.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-user-agent/ios",
+				);
+				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.PWAReactNativeWrapper-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Staging;
+		};
+		C738A28A22E38D63001CB5B2 /* Staging */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E3809642AD50F165562B97 /* Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
+					"$(SRCROOT)/../node_modules/react-native-user-agent/ios",
+				);
+				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.PWAReactNativeWrapper-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PWAReactNativeWrapper-tvOS.app/PWAReactNativeWrapper-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
+			};
+			name = Staging;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1835,6 +2065,7 @@
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
 				00E356F71AD99517003FC87E /* Release */,
+				C738A28822E38D63001CB5B2 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1844,6 +2075,7 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+				C738A28722E38D63001CB5B2 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1853,6 +2085,7 @@
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
 				2D02E4981E0B4A5E006451C7 /* Release */,
+				C738A28922E38D63001CB5B2 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1862,6 +2095,7 @@
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
 				2D02E49A1E0B4A5E006451C7 /* Release */,
+				C738A28A22E38D63001CB5B2 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1871,6 +2105,7 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+				C738A28622E38D63001CB5B2 /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

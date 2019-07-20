@@ -150,7 +150,9 @@ Each time you publish a new build to the app store, make sure to increment the b
 
 #### Navigate to `Product > Scheme > Edit Scheme...`
 
-Switch the `Build Configuration` from Debug to Release
+Switch the `Build Configuration` from Beta to Release
+
+##### Note: Setting it to `Debug` will try to recompile the javascript, and so that `Build Configuration` should only be used when extending this app, see *`Extending JS`* and *`Building for Android`* for more info.
 
 #### Next Steps
 
