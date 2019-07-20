@@ -47,7 +47,7 @@ yarn-error.log
 !node_modules/react-native-permissions
 !node_modules/react-native
 !node_modules/react-native-audio
-
+!node_modules/@react-native-community
 
 # BUCK
 buck-out/
