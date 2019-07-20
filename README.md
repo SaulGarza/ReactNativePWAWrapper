@@ -8,9 +8,25 @@ This project is a fully customizable iOS WebView that adds a WebRTC Audio adapte
 
 The Caveat to that is that some of these features, since they are not in WebRTC in general, would also need the android build to cover those solutions.
 
+## Installing Node.js
+
+### Homebrew (Recommended)
+If you don't have homebrew, and you would like to install it on your mac, run the following command in terminal.
+
+`/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+Verify with `brew -v`
+
+then just: `brew install node`
+
+### Packager Install
+
+Download and run the `Current` lastest Node version on https://nodejs.org/
+
 ## Prerequisites
 * Familiarity with xCode
 * Familiarity with App Store Connect
+* Node.js and NPM installed, Yarn Optional.
 * App Icons ready in seperate folder (As of the time of this writing requires the following image sizes)
   * `AppIcon20pt@2x.png` - iPhone Notification [iOS 7-12]: width/height = 40px
   * `AppIcon20pt@3x.png` - iPhone Notification [iOS 7-12]: width/height = 60px
@@ -54,15 +70,17 @@ Files to note here
 
 Clone or fork the repo as needed
 
+run `
+
 Open the `.xcworkspace` file in xCode
 
 ### xCode
 
 #### Navigate to the project target,
 
-Reassign the `Bundle Identifier` and `Display Name` to whatever you want. In the case of your `Bundle Identifier`, you should use reverse domain notation. eg: For Coop Dreams you could denote it: `app.getvoxi.coopdreams`
+Reassign the `Bundle Identifier` and `Display Name` to whatever you want. In the case of your `Bundle Identifier`, you should use reverse domain notation. eg: For Coop Dreams you could denote it: `app.getvoxi.coopdreams`. However, make sure to keep the `XCodeSchemesLowercase` variable to continue having access to all your app bundles at once on your phones.
 
-Change the `Team` in the Target > Signing Section
+Change the `Team` in the `Target > Signing Section`
 
 #### Navigate to the Project's `info.plist`
 
@@ -71,6 +89,8 @@ Change the `Privacy - Location When in Use Description` and `Privacy - Microphon
 #### Navigate to the Project's `Images.xcassets`
 
 replace the AppIcon and splash_image resources with the matching images you prepared earlier
+
+##### Take notice of the Alternate AppIcon.[Scheme name], If you append `${XCodeSchemesLowercase}` to `Build Settings > User-Defined > Asset Catalog Compiler > Asset Catalog App Icon Set Name`, you can fill in those new app icons to have different icons per build configuration.
 
 #### Navigate to the Project Target's `Build Settings > User-Defined`, Located at the bottom of the Build Settings
 
@@ -144,28 +164,32 @@ If `OfflineLoadType = 'image'`, replace the `offline_image`'s with whatever offl
 
 ### Publishing (back to xCode)
 
-#### Navigate to the project target
+#### Navigate to the project target > General
 
-Each time you publish a new build to the app store, make sure to increment the build number or the `Build Settings > User Defined > UAPostfixSettingVersion` or Apple will not allow the push.
+Each time you publish a new build to the app store, make sure to increment the build number or Apple will not allow the push.
 
-#### Navigate to `Product > Scheme > Edit Scheme...`
+#### Take Notice of XCode's Top Left Button Group
 
-Switch the `Build Configuration` from Beta to Release
+If this is the first time running the app, switch the scheme to `Release` and run it. React Native is weird with additional schemes and so `Staging` Actually relies on the same files as `Release` (configuration variables still stay the same though, and don't cause issues :P)
 
-##### Note: Setting it to `Debug` will try to recompile the javascript, and so that `Build Configuration` should only be used when extending this app, see *`Extending JS`* and *`Building for Android`* for more info.
+Switch the scheme to `Staging` to get ready to test it live on `https://demo.getvoxi.app` or whatever you set in the `Build Settings > User-Defined > WebRTCAdapterSettingURL > Staging`
+
+##### This new third scheme allows you and your team to change the `Debug` url all you want to fit local development environments
 
 #### Next Steps
 
-Once tested on a physical device and you are sure you'd like to publish, switch the build target to `Generic iOS Device`
+Once tested on a physical device with the `Release` Scheme, and you are sure you'd like to publish, switch the build target to `Generic iOS Device`
 
 Publish to the app store from `Product > Archive`
+##### Make sure to not archive the `Staging` Scheme
 
 Wait for the archive to finish and upload to App Store Connect
 
 ## Extending JS
-I moved the project configuration from compiled typescript to xCode in order to eliminate the npm / yarn dependency and eliminate the need to compile any JS code. If you would like to extend this and change the compiled main.jsbundle, you will need to run `npm i` or `yarn` in the project directory to download all node_modules
+Edit: I discovered that I am unable to do this easily. For now just make sure to have `node` and `npm`, `yarn` is the package manager I use. I will continue exploring my options here out of my own curiosity, but there doesnt seem to be much documentation on that part of React Native.
+<!-- I moved the project configuration from compiled typescript to xCode in order to eliminate the npm / yarn dependency and eliminate the need to compile any JS code. If you would like to extend this and change the compiled main.jsbundle, you will need to run `npm i` or `yarn` in the project directory to download all node_modules
 
-Utilizing the CustomOfflineComponent requires this option.
+Utilizing the CustomOfflineComponent requires this option. -->
 
 ## Building for Android
 iOS inherently blocks WebViews from exposing WebRTC Camera and Microphone, however, android doesn't have this same problem, so this same project will run the same on android, but use the PWA's normal WebRTC api to get Mic information.
