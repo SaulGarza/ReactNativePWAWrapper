@@ -1525,7 +1525,7 @@
 					"-lc++",
 				);
 				OfflineLoadType = image;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.horizonsystems";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.${XCodeSchemesLowercase}";
 				PRODUCT_NAME = PWAReactNativeWrapper;
 				PushMobileWebpageMeta = YES;
 				StatusBarOfflineStyle = "";
@@ -1533,6 +1533,7 @@
 				UAPostfixExtraData = "";
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
+				XCodeSchemesLowercase = debug;
 			};
 			name = Debug;
 		};
@@ -1561,7 +1562,7 @@
 					"-lc++",
 				);
 				OfflineLoadType = image;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.horizonsystems";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.${XCodeSchemesLowercase}";
 				PRODUCT_NAME = PWAReactNativeWrapper;
 				PushMobileWebpageMeta = YES;
 				StatusBarOfflineStyle = "";
@@ -1569,6 +1570,7 @@
 				UAPostfixExtraData = "";
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
+				XCodeSchemesLowercase = release;
 			};
 			name = Release;
 		};
@@ -1935,7 +1937,7 @@
 				);
 				OfflineLoadType = image;
 				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/Release$(EFFECTIVE_PLATFORM_NAME)";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.horizonsystems";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.${XCodeSchemesLowercase}";
 				PRODUCT_NAME = PWAReactNativeWrapper;
 				PushMobileWebpageMeta = YES;
 				StatusBarOfflineStyle = "";
@@ -1944,6 +1946,7 @@
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
 				WebRCTAdapterSettingURL = "https://demo.getvoxi.app";
+				XCodeSchemesLowercase = staging;
 			};
 			name = Staging;
 		};
