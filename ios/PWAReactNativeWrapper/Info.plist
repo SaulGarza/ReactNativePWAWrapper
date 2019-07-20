@@ -2,49 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>WebRCTApplicationConfig</key>
-	<dict>
-		<key>domainOriginTestPattern</key>
-		<string>${DomainOriginTestPattern}</string>
-		<key>forceOfflineFullscreen</key>
-		<string>${FullscreenWhenOffline}</string>
-		<key>offlineBarStyle</key>
-		<string>${StatusBarOfflineStyle}</string>
-		<key>barStyle</key>
-		<string>${StatusBarStyle}</string>
-		<key>audioQuality</key>
-		<string>${AudioQuality}</string>
-		<key>fullscreen</key>
-		<string>${Fullscreen}</string>
-		<key>disableWebpageZoom</key>
-		<string>${DisableWebpageZoom}</string>
-		<key>pushMobileWebpageMeta</key>
-		<string>${PushMobileWebpageMeta}</string>
-		<key>enableMixedContentMode</key>
-		<string>${EnableMixedContentMode}</string>
-		<key>url</key>
-		<string>${WebRCTAdapterSettingURL}</string>
-		<key>postfix</key>
-		<dict>
-			<key>other_postfix</key>
-			<string>${UAPostfixExtraData}</string>
-			<key>version</key>
-			<string>${UAPostfixSettingVersion}</string>
-			<key>app_id</key>
-			<string>${UAPostfixSettingAppId}</string>
-		</dict>
-		<key>colors</key>
-		<dict>
-			<key>spinner</key>
-			<string>${ColorSettingLoadingSpinner}</string>
-			<key>backgroundColor</key>
-			<string>${ColorSettingStatusBar}</string>
-			<key>text</key>
-			<string>${ColorSettingErrorText}</string>
-			<key>primary</key>
-			<string>${ColorSettingPrimary}</string>
-		</dict>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -114,5 +71,48 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>WebRCTApplicationConfig</key>
+	<dict>
+		<key>audioQuality</key>
+		<string>${AudioQuality}</string>
+		<key>barStyle</key>
+		<string>${StatusBarStyle}</string>
+		<key>colors</key>
+		<dict>
+			<key>backgroundColor</key>
+			<string>${ColorSettingStatusBar}</string>
+			<key>primary</key>
+			<string>${ColorSettingPrimary}</string>
+			<key>spinner</key>
+			<string>${ColorSettingLoadingSpinner}</string>
+			<key>text</key>
+			<string>${ColorSettingErrorText}</string>
+		</dict>
+		<key>disableWebpageZoom</key>
+		<string>${DisableWebpageZoom}</string>
+		<key>domainOriginTestPattern</key>
+		<string>${DomainOriginTestPattern}</string>
+		<key>enableMixedContentMode</key>
+		<string>${EnableMixedContentMode}</string>
+		<key>forceOfflineFullscreen</key>
+		<string>${FullscreenWhenOffline}</string>
+		<key>fullscreen</key>
+		<string>${Fullscreen}</string>
+		<key>offlineBarStyle</key>
+		<string>${StatusBarOfflineStyle}</string>
+		<key>postfix</key>
+		<dict>
+			<key>app_id</key>
+			<string>${UAPostfixSettingAppId}</string>
+			<key>other_postfix</key>
+			<string>${UAPostfixExtraData}</string>
+			<key>version</key>
+			<string>${UAPostfixSettingVersion}</string>
+		</dict>
+		<key>pushMobileWebpageMeta</key>
+		<string>${PushMobileWebpageMeta}</string>
+		<key>url</key>
+		<string>${WebRCTAdapterSettingURL}</string>
+	</dict>
 </dict>
 </plist>
