@@ -38,9 +38,15 @@ local.properties
 
 # node.js
 #
-node_modules/
+node_modules/*
 npm-debug.log
 yarn-error.log
+
+# RCTBridgedModule Exceptions
+!node_modules/react-native-webview
+!node_modules/react-native-permissions
+!node_modules/react-native
+
 
 # BUCK
 buck-out/
