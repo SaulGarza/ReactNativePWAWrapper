@@ -1525,11 +1525,7 @@
 					"-lc++",
 				);
 				OfflineLoadType = image;
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.${XCodeSchemesLowercase}";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.$(XCodeSchemeLowercase)";
->>>>>>> 2cb051c8887c8a508d2b02cc4fb2dd6b72fdbd65
 				PRODUCT_NAME = PWAReactNativeWrapper;
 				PushMobileWebpageMeta = YES;
 				StatusBarOfflineStyle = "";
@@ -1537,11 +1533,7 @@
 				UAPostfixExtraData = "";
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
-<<<<<<< HEAD
 				XCodeSchemesLowercase = debug;
-=======
-				XCodeSchemeLowercase = debug;
->>>>>>> 2cb051c8887c8a508d2b02cc4fb2dd6b72fdbd65
 			};
 			name = Debug;
 		};
@@ -1570,11 +1562,7 @@
 					"-lc++",
 				);
 				OfflineLoadType = image;
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.${XCodeSchemesLowercase}";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.$(XCodeSchemeLowercase)";
->>>>>>> 2cb051c8887c8a508d2b02cc4fb2dd6b72fdbd65
 				PRODUCT_NAME = PWAReactNativeWrapper;
 				PushMobileWebpageMeta = YES;
 				StatusBarOfflineStyle = "";
@@ -1582,11 +1570,7 @@
 				UAPostfixExtraData = "";
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
-<<<<<<< HEAD
 				XCodeSchemesLowercase = release;
-=======
-				XCodeSchemeLowercase = release;
->>>>>>> 2cb051c8887c8a508d2b02cc4fb2dd6b72fdbd65
 			};
 			name = Release;
 		};
@@ -1953,11 +1937,7 @@
 				);
 				OfflineLoadType = image;
 				PODS_CONFIGURATION_BUILD_DIR = "${PODS_BUILD_DIR}/Release$(EFFECTIVE_PLATFORM_NAME)";
-<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.${XCodeSchemesLowercase}";
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = "com.saul-garza.webrtcadapter.$(XCodeSchemeLowercase)";
->>>>>>> 2cb051c8887c8a508d2b02cc4fb2dd6b72fdbd65
 				PRODUCT_NAME = PWAReactNativeWrapper;
 				PushMobileWebpageMeta = YES;
 				StatusBarOfflineStyle = "";
@@ -1966,11 +1946,7 @@
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
 				WebRCTAdapterSettingURL = "https://demo.getvoxi.app";
-<<<<<<< HEAD
 				XCodeSchemesLowercase = staging;
-=======
-				XCodeSchemeLowercase = staging;
->>>>>>> 2cb051c8887c8a508d2b02cc4fb2dd6b72fdbd65
 			};
 			name = Staging;
 		};

@@ -21,6 +21,13 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+!*.xcodeproj
+ios/PWAReactNativeWrapper.xcodeproj/*
+!ios/PWAReactNativeWrapper.xcodeproj/xcshareddata
+ios/PWAReactNativeWrapper.xcodeproj/xcshareddata/*
+!ios/PWAReactNativeWrapper.xcodeproj/xcshareddata/xcschemes
+!ios/PWAReactNativeWrapper.xcodeproj/xcshareddata/xcschemes/*.xcschemes
+
 
 local/
 
