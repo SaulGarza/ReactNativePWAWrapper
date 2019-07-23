@@ -212,7 +212,11 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
               this.webView.stopLoading()
               Linking.canOpenURL(url).then((supported) => {
                 if (!supported) {
-                  Alert.alert(`Can't open url: ${url}`)
+                  if(__DEV__) {
+                    Alert.alert(`Can't open url: ${url}`)
+                  } else {
+                    `Can't open url: ${url}`
+                  }
                 } else {
                   Linking.openURL(url)
                 }
