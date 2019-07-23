@@ -229,35 +229,6 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
             }
           }}
 
-          // {...{
-          //   onNavigationStateChange: (navState: WebViewNavigation) => {
-          //     try {
-          //       const { url } = navState
-          //       const hasWhitelistPattern = !!this.props.domainOriginTestPattern
-          //       if(hasWhitelistPattern) {
-          //         const isWhitelistedURL = url.includes(this.props.domainOriginTestPattern!)
-          //         if(isWhitelistedURL) {
-          //           return true
-          //         } else {
-          //           Linking.canOpenURL(url).then((supported) => {
-          //             if (!supported) {
-          //               Alert.alert(`Can't open url: ${url}`)
-          //             } else {
-          //               Linking.openURL(url)
-          //             }
-          //           }).catch((reason) => {
-          //             throw 'Couldnt open url?'
-          //           })
-          //           return false
-          //         }
-          //       }
-          //       return false
-          //     } catch (e) {
-          //       console.log(e)
-          //       return false
-          //     }
-          //   },
-          // }}
         />
       </View>
     );
