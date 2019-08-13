@@ -15,7 +15,7 @@ import { AppProps, AppConstants } from './src/types'
 import { getWebViewUserAgent } from 'react-native-user-agent'
 
 const interpolateYayNay = (stringBool?: 'YES' | 'NO', defaultReturn: boolean = true) => {
-  if(!!stringBool) return defaultReturn
+  if(!stringBool) return defaultReturn
   return stringBool === 'YES' ? true : false
 }
 
@@ -30,7 +30,7 @@ export default class App extends React.PureComponent<AppProps> {
       enableMixedContentMode: interpolateYayNay(this.props.enableMixedContentMode),
       pushMobileWebpageMeta: interpolateYayNay(this.props.pushMobileWebpageMeta),
       disableWebpageZoom: interpolateYayNay(this.props.disableWebpageZoom),
-      fullScreen: interpolateYayNay(this.props.fullscreen, false),
+      fullscreen: interpolateYayNay(this.props.fullscreen, false),
       forceOfflineFullscreen: interpolateYayNay(this.props.forceOfflineFullscreen),
     }
     delete props.postfix

@@ -66,38 +66,37 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
     styles = generateStyles(props)
   }
   public componentDidMount() {
-    AudioRecorder.requestAuthorization().then((isAuthorised) => {
-      this.setState({ hasPermission: isAuthorised });
+    // AudioRecorder.checkAuthorizationStatus().then((isAuthorized) => {
+    //   this.setState({ hasPermission: isAuthorized })
+      
+    //   if (!isAuthorized) return;
 
-      if (!isAuthorised) return;
+    //   this.prepareRecordingPath(this.state.audioPath);
 
-      this.prepareRecordingPath(this.state.audioPath);
+    //   this.webView
+    // })
 
-      this.webView
+    AudioRecorder.onProgress = (data: {
+      currentTime: number, // Current time in seconds
+      currentPeakMetering: number, // Maximum Volume in Decibels
+      currentMetering: number, // Avg Volume in Decibels
+    }) => {
+      this.setState({currentTime: Math.floor(data.currentTime)})
+      this.webView.postMessage(JSON.stringify({
+        name: 'progress',
+        time: data.currentTime * 1000,
+        currentMetering: data.currentMetering,
+        currentPeakMetering: data.currentPeakMetering,
+      }))
+    }
 
-      AudioRecorder.onProgress = (data: {
-        currentTime: number, // Current time in seconds
-        currentPeakMetering: number, // Maximum Volume in Decibels
-        currentMetering: number, // Avg Volume in Decibels
-      }) => {
-        this.setState({currentTime: Math.floor(data.currentTime)});
-        console.log('Current Time: ', data.currentTime, data)
-        this.webView.postMessage(JSON.stringify({
-          name: 'progress',
-          time: data.currentTime * 1000,
-          currentMetering: data.currentMetering,
-          currentPeakMetering: data.currentPeakMetering,
-        }))
-      };
-
-      AudioRecorder.onFinished = (data) => {
-        if (Platform.OS === 'ios') {
-          this.finishRecording(data.status === "OK", data.base64);
-        } else {
-          this.finishRecording(true, data.base64)
-        }
-      };
-    });
+    AudioRecorder.onFinished = (data) => {
+      if (Platform.OS === 'ios') {
+        this.finishRecording(data.status === "OK", data.base64);
+      } else {
+        this.finishRecording(true, data.base64)
+      }
+    }
   }
 
   private async stop() {
@@ -112,10 +111,32 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
     }
   }
 
-  private async record() {
+  private record() {
+    console.log('recording!')
+    if(!this.state.hasPermission) {
+      AudioRecorder.requestAuthorization().then((isAuthorized) => {
+        this.setState(
+          { hasPermission: isAuthorized},
+          () => {
+            if(this.state.hasPermission) {
+              this.startRecording()
+            } else {
+              this.showSettings('customMessages')
+            }
+          }
+        )
+      })
+    } else {
+      this.startRecording()
+    }
+  }
+  private async startRecording() {
     if (this.state.recording) return
-    if (!this.state.hasPermission) return
-    if(this.state.stoppedRecording) this.prepareRecordingPath(this.state.audioPath);
+    if(!this.state.hasPermission) {
+      this.showSettings()
+      return
+    }
+    this.prepareRecordingPath(this.state.audioPath);
 
     this.setState({recording: true, paused: false});
 
@@ -124,6 +145,24 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
       this.webView.postMessage(JSON.stringify({ name: 'start' }))
     } catch (error) {
     }
+  }
+
+  private showSettings(customMessage?: string) {
+    Alert.alert(
+      'Could not access Microphone',
+      `Turn on Microphone access in settings ${customMessage}`,
+      [
+        {
+          text: 'Cancel',
+          onPress: () => this.setState({ hasPermission: false }),
+          style: 'cancel',
+        },
+        {
+          text: 'Go To Settings',
+          onPress: () => Linking.openURL('app-settings:'),
+        }
+      ]
+    )
   }
 
   private finishRecording(didSucceed: boolean, encoding: string) {
@@ -177,7 +216,6 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
       navigator.allowBridgedWebRTC = 'microphone'
       ${contentMeta}
     `
-    console.log('PROPS: ', this.props)
     return (
       <View style={styles.container}>
         <StatusBar barStyle={this.props.barStyle}/>
