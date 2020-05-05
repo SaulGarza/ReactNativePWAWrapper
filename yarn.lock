@@ -2572,7 +2572,12 @@ escape-html@~1.0.3:
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=
 
-escape-string-regexp@1.0.5, escape-string-regexp@^1.0.5:
+escape-string-regexp@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-2.0.0.tgz#a30304e99daa32e23b2fd20f51babd07cffca344"
+  integrity sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==
+
+escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
@@ -5613,12 +5618,12 @@ react-native-user-agent@^1.0.4:
   resolved "https://registry.yarnpkg.com/react-native-user-agent/-/react-native-user-agent-1.0.4.tgz#2be1da43028b41118d6c0ab325a0dc2e2c7d3bf4"
   integrity sha512-kSrtMeIHgDVBep2S88LNjyCsU6bWOOR66CJ+DU27EAOS5NOVHB8hLKylEALg5wI5fedGYb70xLsDMic29f7SNQ==
 
-react-native-webview@^5.12.1:
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-5.12.1.tgz#5e2b124e9087d64fc40040d911c10ee5744b5d4d"
-  integrity sha512-pFYzyNUG+k7Jk2a0Z3S1+OL9qtp0VQxVP08d1ume/O6l1Xibi0K0hRZms7zPUHqQc2uWEfjZ0FOa17MIN7vruw==
+react-native-webview@^9.4.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-9.4.0.tgz#108da34a6c7e1c032dcabc942b7e4947ca1d8028"
+  integrity sha512-BBOFUuza0p04+7fNi7TJmB0arpDJzGxHYwTCgI4vj5n/fl7u4jbm7ETp88mf7lo9lP6C6HGLo38KnEy1aXCQkg==
   dependencies:
-    escape-string-regexp "1.0.5"
+    escape-string-regexp "2.0.0"
     invariant "2.2.4"
 
 react-native@0.62.2:
