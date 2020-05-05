@@ -15,8 +15,7 @@
   "react-native-audio": "^4.3.0",
   "react-native-device-info": "^2.1.2",
   "react-native-iphone-x-helper": "^1.2.1",
-  "react-native-permissions": "^1.1.1",
-  "react-native-user-agent": "^1.0.4",
+  "react-native-permissions": "^2.1.4",
   "react-native-webview": "^9.4.0"
  },
  "devDependencies": {

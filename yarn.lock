@@ -5596,10 +5596,10 @@ react-native-iphone-x-helper@^1.2.1:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.2.1.tgz#645e2ffbbb49e80844bb4cbbe34a126fda1e6772"
   integrity sha512-/VbpIEp8tSNNHIvstuA3Swx610whci1Zpc9mqNkqn14DkMbw+ORviln2u0XyHG1kPvvwTNGZY6QpeFwxYaSdbQ==
 
-react-native-permissions@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.1.1.tgz#4876004681ff8556454613d85249b01baff9b35b"
-  integrity sha512-t0Ujm177bagjUOSzhpmkSz+LqFW04HnY9TeZFavDCmV521fQvFz82aD+POXqWsAdsJVOK3umJYBNNqCjC3g0hQ==
+react-native-permissions@^2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-2.1.4.tgz#b0663839d28444d8ea6b5302303b2151ea70d2da"
+  integrity sha512-R1mVPGctEJuOlxoeIBlT5270A+DKngP78rWU0dgMxIuETjGYhBRJMKOp1rQUbp6PxcahfU+PjSTSzsbja5FyDw==
 
 react-native-schemes-manager@^2.0.0:
   version "2.0.0"
@@ -5612,11 +5612,6 @@ react-native-schemes-manager@^2.0.0:
     plist "^3.0.1"
     xcode "^2.0.0"
     yargs "^13.2.1"
-
-react-native-user-agent@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-native-user-agent/-/react-native-user-agent-1.0.4.tgz#2be1da43028b41118d6c0ab325a0dc2e2c7d3bf4"
-  integrity sha512-kSrtMeIHgDVBep2S88LNjyCsU6bWOOR66CJ+DU27EAOS5NOVHB8hLKylEALg5wI5fedGYb70xLsDMic29f7SNQ==
 
 react-native-webview@^9.4.0:
   version "9.4.0"

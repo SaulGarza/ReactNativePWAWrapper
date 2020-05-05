@@ -68,7 +68,7 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
   public componentDidMount() {
     // AudioRecorder.checkAuthorizationStatus().then((isAuthorized) => {
     //   this.setState({ hasPermission: isAuthorized })
-      
+
     //   if (!isAuthorized) return;
 
     //   this.prepareRecordingPath(this.state.audioPath);
@@ -91,6 +91,7 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
     }
 
     AudioRecorder.onFinished = (data) => {
+      // console.log("finished recording!", data)
       if (Platform.OS === 'ios') {
         this.finishRecording(data.status === "OK", data.base64);
       } else {
@@ -112,7 +113,7 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
   }
 
   private record() {
-    console.log('recording!')
+    // console.log('recording!')
     if(!this.state.hasPermission) {
       AudioRecorder.requestAuthorization().then((isAuthorized) => {
         this.setState(
@@ -222,7 +223,6 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
         <WebView
           ref={(component) => this.webView = component}
           source={{ uri: this.props.url }}
-          useWebKit
           allowFileAccess
           startInLoadingState
           allowsInlineMediaPlayback
@@ -230,9 +230,9 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
           style={styles.webView}
           domStorageEnabled={true}
           // scalesPageToFit={Platform.OS === 'android' ? false : true}
-          
+
           originWhitelist={['*']}
-          
+
           javaScriptEnabled={true}
           onMessage={e => this.onMessage(e)}
           injectedJavaScript={INJECTED_JAVASCRIPT}

@@ -1,11 +1,9 @@
-import React from 'react'
-import WebViewComponent from './WebViewComponent'
-import { AppConstants } from '../types'
+import React from 'react';
+import WebViewComponent from './WebViewComponent';
+import {AppConstants} from '../types';
 
-export default class Main extends React.Component<AppConstants,{}> {
+export default class Main extends React.Component<AppConstants, {}> {
   render() {
-    return (
-      <WebViewComponent {...this.props} />
-    )
+    return <WebViewComponent {...this.props} />;
   }
 }

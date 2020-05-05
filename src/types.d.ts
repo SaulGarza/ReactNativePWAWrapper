@@ -1,4 +1,6 @@
-export interface ObjectOf<T> {[key: string]: T}
+export interface ObjectOf<T> {
+  [key: string]: T;
+}
 
 export enum BarStyle {
   'default' = 'default',
@@ -12,41 +14,41 @@ export enum AudioQuality {
   'High' = 'High',
 }
 
-export type StringBool = 'YES' | 'NO'
+export type StringBool = 'YES' | 'NO';
 
 type Props = {
   colors: {
-    primary: string,
-    text: string,
-    backgroundColor: string,
-    spinner: string,
-  },
-  domainOriginTestPattern?: string
-  url: string,
-  audioQuality: AudioQuality,
-  barStyle: BarStyle,
-  offlineBarStyle?: BarStyle,
-  offlineLoadingType: 'image' | 'text' | 'custom'
-}
+    primary: string;
+    text: string;
+    backgroundColor: string;
+    spinner: string;
+  };
+  domainOriginTestPattern?: string;
+  url: string;
+  audioQuality: AudioQuality;
+  barStyle: BarStyle;
+  offlineBarStyle?: BarStyle;
+  offlineLoadingType: 'image' | 'text' | 'custom';
+};
 
 export type AppProps = {
   postfix: {
-    app_id: string,
-    version?: string,
-    other_postfix?: string,
-  },
-  enableMixedContentMode: StringBool,
-  pushMobileWebpageMeta: StringBool,
-  disableWebpageZoom: StringBool,
-  fullscreen: StringBool,
-  forceOfflineFullscreen: StringBool,
-} & Props
+    app_id: string;
+    version?: string;
+    other_postfix?: string;
+  };
+  enableMixedContentMode: StringBool;
+  pushMobileWebpageMeta: StringBool;
+  disableWebpageZoom: StringBool;
+  fullscreen: StringBool;
+  forceOfflineFullscreen: StringBool;
+} & Props;
 
 export type AppConstants = {
-  userAgent: string,
-  enableMixedContentMode: boolean,
-  pushMobileWebpageMeta: boolean,
-  disableWebpageZoom: boolean,
-  fullscreen: boolean,
-  forceOfflineFullscreen: boolean,
-} & Props
+  userAgent: string;
+  enableMixedContentMode: boolean;
+  pushMobileWebpageMeta: boolean;
+  disableWebpageZoom: boolean;
+  fullscreen: boolean;
+  forceOfflineFullscreen: boolean;
+} & Props;

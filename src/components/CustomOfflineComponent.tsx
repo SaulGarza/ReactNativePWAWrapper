@@ -22,8 +22,8 @@ export default class OfflineComponent extends React.PureComponent<IProps, IState
   }
   render() {
     return (
-      <View style={styles().errorTextContainer}>
-        <Text style={styles().errorText}>Could not connect to Server</Text>
+      <View style={(styles as any)().errorTextContainer}>
+        <Text style={(styles as any)().errorText}>Could not connect to Server</Text>
       </View>
     )
   }
