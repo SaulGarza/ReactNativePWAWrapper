@@ -10,13 +10,12 @@
 
 'use strict';
 
-const NativeEventEmitter = require('NativeEventEmitter');
-const RCTPushNotificationManager = require('NativeModules')
-  .PushNotificationManager;
+const NativeEventEmitter = require('../EventEmitter/NativeEventEmitter');
+import NativePushNotificationManagerIOS from './NativePushNotificationManagerIOS';
 const invariant = require('invariant');
 
 const PushNotificationEmitter = new NativeEventEmitter(
-  RCTPushNotificationManager,
+  NativePushNotificationManagerIOS,
 );
 
 const _notifHandlers = new Map();
@@ -32,12 +31,13 @@ export type FetchResult = {
   NewData: string,
   NoData: string,
   ResultFailed: string,
+  ...
 };
 
 /**
  * An event emitted by PushNotificationIOS.
  */
-export type PushNotificationEventName = $Enum<{
+export type PushNotificationEventName = $Keys<{
   /**
    * Fired when a remote notification is received. The handler will be invoked
    * with an instance of `PushNotificationIOS`.
@@ -59,6 +59,7 @@ export type PushNotificationEventName = $Enum<{
    * handler will be invoked with {message: string, code: number, details: any}.
    */
   registrationError: string,
+  ...
 }>;
 
 /**
@@ -92,7 +93,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#presentlocalnotification
    */
   static presentLocalNotification(details: Object) {
-    RCTPushNotificationManager.presentLocalNotification(details);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.presentLocalNotification(details);
   }
 
   /**
@@ -101,7 +106,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#schedulelocalnotification
    */
   static scheduleLocalNotification(details: Object) {
-    RCTPushNotificationManager.scheduleLocalNotification(details);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.scheduleLocalNotification(details);
   }
 
   /**
@@ -110,7 +119,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#cancelalllocalnotifications
    */
   static cancelAllLocalNotifications() {
-    RCTPushNotificationManager.cancelAllLocalNotifications();
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.cancelAllLocalNotifications();
   }
 
   /**
@@ -119,7 +132,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#removealldeliverednotifications
    */
   static removeAllDeliveredNotifications(): void {
-    RCTPushNotificationManager.removeAllDeliveredNotifications();
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.removeAllDeliveredNotifications();
   }
 
   /**
@@ -130,7 +147,11 @@ class PushNotificationIOS {
   static getDeliveredNotifications(
     callback: (notifications: Array<Object>) => void,
   ): void {
-    RCTPushNotificationManager.getDeliveredNotifications(callback);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.getDeliveredNotifications(callback);
   }
 
   /**
@@ -139,7 +160,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#removedeliverednotifications
    */
   static removeDeliveredNotifications(identifiers: Array<string>): void {
-    RCTPushNotificationManager.removeDeliveredNotifications(identifiers);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.removeDeliveredNotifications(identifiers);
   }
 
   /**
@@ -148,7 +173,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#setapplicationiconbadgenumber
    */
   static setApplicationIconBadgeNumber(number: number) {
-    RCTPushNotificationManager.setApplicationIconBadgeNumber(number);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.setApplicationIconBadgeNumber(number);
   }
 
   /**
@@ -157,7 +186,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#getapplicationiconbadgenumber
    */
   static getApplicationIconBadgeNumber(callback: Function) {
-    RCTPushNotificationManager.getApplicationIconBadgeNumber(callback);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.getApplicationIconBadgeNumber(callback);
   }
 
   /**
@@ -166,7 +199,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#cancellocalnotification
    */
   static cancelLocalNotifications(userInfo: Object) {
-    RCTPushNotificationManager.cancelLocalNotifications(userInfo);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.cancelLocalNotifications(userInfo);
   }
 
   /**
@@ -175,7 +212,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#getscheduledlocalnotifications
    */
   static getScheduledLocalNotifications(callback: Function) {
-    RCTPushNotificationManager.getScheduledLocalNotifications(callback);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.getScheduledLocalNotifications(callback);
   }
 
   /**
@@ -262,26 +303,32 @@ class PushNotificationIOS {
     alert?: boolean,
     badge?: boolean,
     sound?: boolean,
+    ...
   }): Promise<{
     alert: boolean,
     badge: boolean,
     sound: boolean,
+    ...
   }> {
-    let requestedPermissions = {};
+    let requestedPermissions = {
+      alert: true,
+      badge: true,
+      sound: true,
+    };
     if (permissions) {
       requestedPermissions = {
         alert: !!permissions.alert,
         badge: !!permissions.badge,
         sound: !!permissions.sound,
       };
-    } else {
-      requestedPermissions = {
-        alert: true,
-        badge: true,
-        sound: true,
-      };
     }
-    return RCTPushNotificationManager.requestPermissions(requestedPermissions);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    return NativePushNotificationManagerIOS.requestPermissions(
+      requestedPermissions,
+    );
   }
 
   /**
@@ -290,7 +337,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#abandonpermissions
    */
   static abandonPermissions() {
-    RCTPushNotificationManager.abandonPermissions();
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.abandonPermissions();
   }
 
   /**
@@ -301,7 +352,11 @@ class PushNotificationIOS {
    */
   static checkPermissions(callback: Function) {
     invariant(typeof callback === 'function', 'Must provide a valid callback');
-    RCTPushNotificationManager.checkPermissions(callback);
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.checkPermissions(callback);
   }
 
   /**
@@ -311,7 +366,11 @@ class PushNotificationIOS {
    * See https://facebook.github.io/react-native/docs/pushnotificationios.html#getinitialnotification
    */
   static getInitialNotification(): Promise<?PushNotificationIOS> {
-    return RCTPushNotificationManager.getInitialNotification().then(
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    return NativePushNotificationManagerIOS.getInitialNotification().then(
       notification => {
         return notification && new PushNotificationIOS(notification);
       },
@@ -374,7 +433,11 @@ class PushNotificationIOS {
     }
     this._remoteNotificationCompleteCallbackCalled = true;
 
-    RCTPushNotificationManager.onFinishRemoteNotification(
+    invariant(
+      NativePushNotificationManagerIOS,
+      'PushNotificationManager is not available.',
+    );
+    NativePushNotificationManagerIOS.onFinishRemoteNotification(
       this._notificationId,
       fetchResult,
     );

@@ -5,25 +5,19 @@
  * LICENSE file in the root directory of this source tree.
  *
  * @format
- * @flow
+ * @flow strict-local
  */
 
 'use strict';
 
-const DeprecatedEdgeInsetsPropType = require('DeprecatedEdgeInsetsPropType');
-const PlatformViewPropTypes = require('PlatformViewPropTypes');
+const DeprecatedEdgeInsetsPropType = require('./DeprecatedEdgeInsetsPropType');
+const DeprecatedStyleSheetPropType = require('./DeprecatedStyleSheetPropType');
+const DeprecatedViewStylePropTypes = require('./DeprecatedViewStylePropTypes');
 const PropTypes = require('prop-types');
-const DeprecatedStyleSheetPropType = require('DeprecatedStyleSheetPropType');
-const DeprecatedViewStylePropTypes = require('DeprecatedViewStylePropTypes');
 
-const {
-  DeprecatedAccessibilityComponentTypes,
-  DeprecatedAccessibilityTraits,
-  DeprecatedAccessibilityRoles,
-  DeprecatedAccessibilityStates,
-} = require('DeprecatedViewAccessibility');
+const {DeprecatedAccessibilityRoles} = require('./DeprecatedViewAccessibility');
 
-const stylePropType = DeprecatedStyleSheetPropType(
+const stylePropType: ReactPropsCheckType = DeprecatedStyleSheetPropType(
   DeprecatedViewStylePropTypes,
 );
 
@@ -60,7 +54,9 @@ module.exports = {
    *
    * @platform ios
    */
-  accessibilityActions: PropTypes.arrayOf(PropTypes.string),
+  accessibilityActions: (PropTypes.arrayOf(
+    PropTypes.string,
+  ): React$PropType$Primitive<Array<string>>),
 
   /**
    * Prevents view from being inverted if set to true and color inversion is turned on.
@@ -70,28 +66,42 @@ module.exports = {
   accessibilityIgnoresInvertColors: PropTypes.bool,
 
   /**
-   * Indicates to accessibility services to treat UI component like a
-   * native one. Works for Android only.
-   *
-   * @platform android
-   *
-   * See http://facebook.github.io/react-native/docs/view.html#accessibilitycomponenttype
-   */
-  accessibilityComponentType: PropTypes.oneOf(
-    DeprecatedAccessibilityComponentTypes,
-  ),
-
-  /**
    * Indicates to accessibility services to treat UI component like a specific role.
    */
-  accessibilityRole: PropTypes.oneOf(DeprecatedAccessibilityRoles),
+  accessibilityRole: (PropTypes.oneOf(
+    DeprecatedAccessibilityRoles,
+  ): React$PropType$Primitive<
+    | 'none'
+    | 'button'
+    | 'link'
+    | 'search'
+    | 'image'
+    | 'keyboardkey'
+    | 'text'
+    | 'adjustable'
+    | 'imagebutton'
+    | 'header'
+    | 'summary'
+    | 'alert'
+    | 'checkbox'
+    | 'combobox'
+    | 'menu'
+    | 'menubar'
+    | 'menuitem'
+    | 'progressbar'
+    | 'radio'
+    | 'radiogroup'
+    | 'scrollbar'
+    | 'spinbutton'
+    | 'switch'
+    | 'tab'
+    | 'tablist'
+    | 'timer'
+    | 'toolbar',
+  >),
 
-  /**
-   * Indicates to accessibility services that UI Component is in a specific State.
-   */
-  accessibilityStates: PropTypes.arrayOf(
-    PropTypes.oneOf(DeprecatedAccessibilityStates),
-  ),
+  accessibilityState: PropTypes.object,
+  accessibilityValue: PropTypes.object,
   /**
    * Indicates to accessibility services whether the user should be notified
    * when this view changes. Works for Android API >= 19 only.
@@ -100,7 +110,11 @@ module.exports = {
    *
    * See http://facebook.github.io/react-native/docs/view.html#accessibilityliveregion
    */
-  accessibilityLiveRegion: PropTypes.oneOf(['none', 'polite', 'assertive']),
+  accessibilityLiveRegion: (PropTypes.oneOf([
+    'none',
+    'polite',
+    'assertive',
+  ]): React$PropType$Primitive<'none' | 'polite' | 'assertive'>),
 
   /**
    * Controls how view is important for accessibility which is if it
@@ -111,27 +125,12 @@ module.exports = {
    *
    * See http://facebook.github.io/react-native/docs/view.html#importantforaccessibility
    */
-  importantForAccessibility: PropTypes.oneOf([
+  importantForAccessibility: (PropTypes.oneOf([
     'auto',
     'yes',
     'no',
     'no-hide-descendants',
-  ]),
-
-  /**
-   * Provides additional traits to screen reader. By default no traits are
-   * provided unless specified otherwise in element.
-   *
-   * You can provide one trait or an array of many traits.
-   *
-   * @platform ios
-   *
-   * See http://facebook.github.io/react-native/docs/view.html#accessibilitytraits
-   */
-  accessibilityTraits: PropTypes.oneOfType([
-    PropTypes.oneOf(DeprecatedAccessibilityTraits),
-    PropTypes.arrayOf(PropTypes.oneOf(DeprecatedAccessibilityTraits)),
-  ]),
+  ]): React$PropType$Primitive<'auto' | 'yes' | 'no' | 'no-hide-descendants'>),
 
   /**
    * A value indicating whether VoiceOver should ignore the elements
@@ -342,7 +341,12 @@ module.exports = {
    *
    * See http://facebook.github.io/react-native/docs/view.html#pointerevents
    */
-  pointerEvents: PropTypes.oneOf(['box-none', 'none', 'box-only', 'auto']),
+  pointerEvents: (PropTypes.oneOf([
+    'box-none',
+    'none',
+    'box-only',
+    'auto',
+  ]): React$PropType$Primitive<'box-none' | 'none' | 'box-only' | 'auto'>),
 
   /**
    * See http://facebook.github.io/react-native/docs/style.html
@@ -401,9 +405,4 @@ module.exports = {
    * See http://facebook.github.io/react-native/docs/view.html#needsoffscreenalphacompositing
    */
   needsOffscreenAlphaCompositing: PropTypes.bool,
-
-  /**
-   * Any additional platform-specific view prop types, or prop type overrides.
-   */
-  ...PlatformViewPropTypes,
 };

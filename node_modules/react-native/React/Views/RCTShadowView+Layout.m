@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -64,12 +64,12 @@
 
 - (void)dirtyLayout
 {
-  // The default implementaion does nothing.
+  // The default implementation does nothing.
 }
 
 - (void)clearLayout
 {
-  // The default implementaion does nothing.
+  // The default implementation does nothing.
 }
 
 @end

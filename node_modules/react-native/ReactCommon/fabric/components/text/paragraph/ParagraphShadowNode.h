@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -8,8 +8,8 @@
 #pragma once
 
 #include <folly/Optional.h>
-#include <react/components/text/ParagraphMeasurementCache.h>
 #include <react/components/text/ParagraphProps.h>
+#include <react/components/text/ParagraphState.h>
 #include <react/components/text/TextShadowNode.h>
 #include <react/components/view/ConcreteViewShadowNode.h>
 #include <react/core/ConcreteShadowNode.h>
@@ -20,7 +20,7 @@
 namespace facebook {
 namespace react {
 
-extern const char ParagraphComponentName[];
+extern char const ParagraphComponentName[];
 
 using ParagraphEventEmitter = ViewEventEmitter;
 
@@ -32,10 +32,17 @@ using ParagraphEventEmitter = ViewEventEmitter;
 class ParagraphShadowNode : public ConcreteViewShadowNode<
                                 ParagraphComponentName,
                                 ParagraphProps,
-                                ParagraphEventEmitter>,
+                                ParagraphEventEmitter,
+                                ParagraphState>,
                             public BaseTextShadowNode {
  public:
   using ConcreteViewShadowNode::ConcreteViewShadowNode;
+
+  static ShadowNodeTraits BaseTraits() {
+    auto traits = ConcreteViewShadowNode::BaseTraits();
+    traits.set(ShadowNodeTraits::Trait::LeafYogaNode);
+    return traits;
+  }
 
   /*
    * Returns a `AttributedString` which represents text content of the node.
@@ -45,18 +52,9 @@ class ParagraphShadowNode : public ConcreteViewShadowNode<
   /*
    * Associates a shared TextLayoutManager with the node.
    * `ParagraphShadowNode` uses the manager to measure text content
-   * and construct `ParagraphLocalData` objects.
+   * and construct `ParagraphState` objects.
    */
   void setTextLayoutManager(SharedTextLayoutManager textLayoutManager);
-
-  /*
-   * Associates a shared LRU cache with the node.
-   * `ParagraphShadowNode` uses this to cache the results of
-   * text rendering measurements.
-   * By design, the ParagraphComponentDescriptor outlives all
-   * shadow nodes, so it's safe for this to be a raw pointer.
-   */
-  void setMeasureCache(const ParagraphMeasurementCache *cache);
 
 #pragma mark - LayoutableShadowNode
 
@@ -65,13 +63,12 @@ class ParagraphShadowNode : public ConcreteViewShadowNode<
 
  private:
   /*
-   * Creates a `LocalData` object (with `AttributedText` and
+   * Creates a `State` object (with `AttributedText` and
    * `TextLayoutManager`) if needed.
    */
-  void updateLocalDataIfNeeded();
+  void updateStateIfNeeded();
 
   SharedTextLayoutManager textLayoutManager_;
-  const ParagraphMeasurementCache *measureCache_;
 
   /*
    * Cached attributed string that represents the content of the subtree started

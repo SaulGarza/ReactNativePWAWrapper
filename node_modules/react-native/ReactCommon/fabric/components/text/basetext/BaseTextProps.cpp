@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -50,7 +50,7 @@ static TextAttributes convertRawProp(
   textAttributes.lineHeight =
       convertRawProp(rawProps, "lineHeight", defaultTextAttributes.lineHeight);
   textAttributes.alignment =
-      convertRawProp(rawProps, "alignment", defaultTextAttributes.alignment);
+      convertRawProp(rawProps, "textAlign", defaultTextAttributes.alignment);
   textAttributes.baseWritingDirection = convertRawProp(
       rawProps,
       "baseWritingDirection",

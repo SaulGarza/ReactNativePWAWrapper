@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -42,8 +42,6 @@ static const char TestComponentName[] = "Test";
 class TestProps : public Props {
  public:
   using Props::Props;
-  TestProps()
-      : Props(Props(), RawProps(folly::dynamic::object("nativeID", "testNativeID"))) {}
 };
 using SharedTestProps = std::shared_ptr<const TestProps>;
 

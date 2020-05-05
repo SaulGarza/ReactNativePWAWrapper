@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -7,9 +7,9 @@
 
 #import "RCTSurfaceTouchHandler.h"
 
-#import <UIKit/UIGestureRecognizerSubclass.h>
 #import <React/RCTUtils.h>
 #import <React/RCTViewComponentView.h>
+#import <UIKit/UIGestureRecognizerSubclass.h>
 
 #import "RCTConversions.h"
 #import "RCTTouchableComponentViewProtocol.h"
@@ -57,6 +57,11 @@ struct ActiveTouch {
   Touch touch;
   SharedTouchEventEmitter eventEmitter;
 
+  /*
+   * A component view on which the touch was begun.
+   */
+  __strong UIView<RCTComponentViewProtocol> *componentView = nil;
+
   struct Hasher {
     size_t operator()(const ActiveTouch &activeTouch) const {
       return std::hash<decltype(activeTouch.touch.identifier)>()(activeTouch.touch.identifier);
@@ -71,7 +76,7 @@ struct ActiveTouch {
 };
 
 static void UpdateActiveTouchWithUITouch(ActiveTouch &activeTouch, UITouch *uiTouch, UIView *rootComponentView) {
-  CGPoint offsetPoint = [uiTouch locationInView:uiTouch.view];
+  CGPoint offsetPoint = [uiTouch locationInView:activeTouch.componentView];
   CGPoint screenPoint = [uiTouch locationInView:uiTouch.window];
   CGPoint pagePoint = [uiTouch locationInView:rootComponentView];
 
@@ -92,9 +97,12 @@ static ActiveTouch CreateTouchWithUITouch(UITouch *uiTouch, UIView *rootComponen
   ActiveTouch activeTouch = {};
 
   if ([componentView respondsToSelector:@selector(touchEventEmitterAtPoint:)]) {
-    activeTouch.eventEmitter = [(id<RCTTouchableComponentViewProtocol>)componentView touchEventEmitterAtPoint:[uiTouch locationInView:componentView]];
+    activeTouch.eventEmitter = [(id<RCTTouchableComponentViewProtocol>)componentView
+        touchEventEmitterAtPoint:[uiTouch locationInView:componentView]];
     activeTouch.touch.target = (Tag)componentView.tag;
   }
+
+  activeTouch.componentView = componentView;
 
   UpdateActiveTouchWithUITouch(activeTouch, uiTouch, rootComponentView);
   return activeTouch;
@@ -225,7 +233,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithTarget:(id)target action:(SEL)action
 {
   TouchEvent event = {};
   std::unordered_set<ActiveTouch, ActiveTouch::Hasher, ActiveTouch::Comparator> changedActiveTouches = {};
-  std::unordered_set<SharedTouchEventEmitter> uniqueEventEmitter = {};
+  std::unordered_set<SharedTouchEventEmitter> uniqueEventEmitters = {};
   BOOL isEndishEventType = eventType == RCTTouchEventTypeTouchEnd || eventType == RCTTouchEventTypeTouchCancel;
 
   for (const auto &activeTouch : activeTouches) {
@@ -235,7 +243,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithTarget:(id)target action:(SEL)action
 
     changedActiveTouches.insert(activeTouch);
     event.changedTouches.insert(activeTouch.touch);
-    uniqueEventEmitter.insert(activeTouch.eventEmitter);
+    uniqueEventEmitters.insert(activeTouch.eventEmitter);
   }
 
   for (const auto &pair : _activeTouches) {
@@ -253,7 +261,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithTarget:(id)target action:(SEL)action
     event.touches.insert(pair.second.touch);
   }
 
-  for (const auto &eventEmitter : uniqueEventEmitter) {
+  for (const auto &eventEmitter : uniqueEventEmitters) {
     event.targetTouches.clear();
 
     for (const auto &pair : _activeTouches) {

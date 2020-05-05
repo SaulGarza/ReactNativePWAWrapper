@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -43,6 +43,12 @@ typedef id<RCTBridgeModule>(^RCTBridgeModuleProvider)(void);
  * time it is called and then memoize the results.
  */
 @property (nonatomic, copy, readonly) NSArray<id<RCTBridgeMethod>> *methods;
+
+/**
+ * Returns a map of the module methods. Note that this will gather the methods the first
+ * time it is called and then memoize the results.
+ */
+@property (nonatomic, copy, readonly) NSDictionary<NSString *, id<RCTBridgeMethod>> *methodsByName;
 
 /**
  * Returns the module's constants, if it exports any

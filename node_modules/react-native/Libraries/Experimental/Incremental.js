@@ -10,12 +10,11 @@
 
 'use strict';
 
-const InteractionManager = require('InteractionManager');
-const React = require('React');
-
+const InteractionManager = require('../Interaction/InteractionManager');
 const PropTypes = require('prop-types');
+const React = require('react');
 
-const infoLog = require('infoLog');
+const infoLog = require('../Utilities/infoLog');
 
 const DEBUG = false;
 
@@ -91,10 +90,9 @@ export type Props = {
    */
   name: string,
   children: React.Node,
+  ...
 };
-type State = {
-  doIncrementalRender: boolean,
-};
+type State = {doIncrementalRender: boolean, ...};
 
 class Incremental extends React.Component<Props, State> {
   props: Props;
@@ -104,11 +102,16 @@ class Incremental extends React.Component<Props, State> {
   _mounted: boolean;
   _rendered: boolean;
 
-  static defaultProps = {
+  static defaultProps: {|name: string|} = {
     name: '',
   };
 
-  static contextTypes = {
+  static contextTypes:
+    | any
+    | {|
+        incrementalGroup: React$PropType$Primitive<any>,
+        incrementalGroupEnabled: React$PropType$Primitive<boolean>,
+      |} = {
     incrementalGroup: PropTypes.object,
     incrementalGroupEnabled: PropTypes.bool,
   };
@@ -187,7 +190,9 @@ export type Context = {
   incrementalGroup: ?{
     groupId: string,
     incrementalCount: number,
+    ...
   },
+  ...
 };
 
 module.exports = Incremental;

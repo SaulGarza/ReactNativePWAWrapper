@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -7,20 +7,16 @@
 
 package com.facebook.react.views.image;
 
-import javax.annotation.Nullable;
-
 import android.graphics.Shader;
-import com.facebook.react.bridge.JSApplicationIllegalArgumentException;
+import androidx.annotation.Nullable;
 import com.facebook.drawee.drawable.ScalingUtils;
+import com.facebook.react.bridge.JSApplicationIllegalArgumentException;
 
-/**
- * Converts JS resize modes into Android-specific scale type.
- */
+/** Converts JS resize modes into Android-specific scale type. */
 public class ImageResizeMode {
 
   /**
-   * Converts JS resize modes into {@code ScalingUtils.ScaleType}.
-   * See {@code ImageResizeMode.js}.
+   * Converts JS resize modes into {@code ScalingUtils.ScaleType}. See {@code ImageResizeMode.js}.
    */
   public static ScalingUtils.ScaleType toScaleType(@Nullable String resizeModeValue) {
     if ("contain".equals(resizeModeValue)) {
@@ -47,10 +43,7 @@ public class ImageResizeMode {
         "Invalid resize mode: '" + resizeModeValue + "'");
   }
 
-  /**
-   * Converts JS resize modes into {@code Shader.TileMode}.
-   * See {@code ImageResizeMode.js}.
-   */
+  /** Converts JS resize modes into {@code Shader.TileMode}. See {@code ImageResizeMode.js}. */
   public static Shader.TileMode toTileMode(@Nullable String resizeModeValue) {
     if ("contain".equals(resizeModeValue)
         || "cover".equals(resizeModeValue)
@@ -70,10 +63,7 @@ public class ImageResizeMode {
         "Invalid resize mode: '" + resizeModeValue + "'");
   }
 
-  /**
-   * This is the default as per web and iOS.
-   * We want to be consistent across platforms.
-   */
+  /** This is the default as per web and iOS. We want to be consistent across platforms. */
   public static ScalingUtils.ScaleType defaultValue() {
     return ScalingUtils.ScaleType.CENTER_CROP;
   }

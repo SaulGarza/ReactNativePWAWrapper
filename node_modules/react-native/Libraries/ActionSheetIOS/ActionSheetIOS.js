@@ -7,12 +7,13 @@
  * @flow
  * @format
  */
+
 'use strict';
 
-const RCTActionSheetManager = require('NativeModules').ActionSheetManager;
+import RCTActionSheetManager from './NativeActionSheetManager';
 
 const invariant = require('invariant');
-const processColor = require('processColor');
+const processColor = require('../StyleSheet/processColor');
 
 /**
  * Display action sheets and share sheets on iOS.
@@ -41,7 +42,7 @@ const ActionSheetIOS = {
       +title?: ?string,
       +message?: ?string,
       +options: Array<string>,
-      +destructiveButtonIndex?: ?number,
+      +destructiveButtonIndex?: ?number | ?Array<number>,
       +cancelButtonIndex?: ?number,
       +anchor?: ?number,
       +tintColor?: number | string,
@@ -53,9 +54,23 @@ const ActionSheetIOS = {
       'Options must be a valid object',
     );
     invariant(typeof callback === 'function', 'Must provide a valid callback');
+    invariant(RCTActionSheetManager, "ActionSheetManager does't exist");
+
+    const {tintColor, destructiveButtonIndex, ...remainingOptions} = options;
+    let destructiveButtonIndices = null;
+
+    if (Array.isArray(destructiveButtonIndex)) {
+      destructiveButtonIndices = destructiveButtonIndex;
+    } else if (typeof destructiveButtonIndex === 'number') {
+      destructiveButtonIndices = [destructiveButtonIndex];
+    }
 
     RCTActionSheetManager.showActionSheetWithOptions(
-      {...options, tintColor: processColor(options.tintColor)},
+      {
+        ...remainingOptions,
+        tintColor: processColor(tintColor),
+        destructiveButtonIndices,
+      },
       callback,
     );
   },
@@ -100,6 +115,7 @@ const ActionSheetIOS = {
       typeof successCallback === 'function',
       'Must provide a valid successCallback',
     );
+    invariant(RCTActionSheetManager, "ActionSheetManager does't exist");
     RCTActionSheetManager.showShareActionSheetWithOptions(
       {...options, tintColor: processColor(options.tintColor)},
       failureCallback,

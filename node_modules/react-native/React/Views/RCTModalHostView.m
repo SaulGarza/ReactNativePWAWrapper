@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
@@ -129,8 +129,6 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:coder)
     [subview addGestureRecognizer:_menuButtonGestureRecognizer];
   }
 #endif
-  subview.autoresizingMask = UIViewAutoresizingFlexibleHeight |
-                             UIViewAutoresizingFlexibleWidth;
 
   [_modalViewController.view insertSubview:subview atIndex:0];
   _reactSubview = subview;
