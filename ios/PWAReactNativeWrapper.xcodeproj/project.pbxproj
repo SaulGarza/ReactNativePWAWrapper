@@ -90,7 +90,6 @@
 		C119E182C93B4226193A99CE /* Pods-PWAReactNativeWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper/Pods-PWAReactNativeWrapper.release.xcconfig"; sourceTree = "<group>"; };
 		C42D6892E202FDCFA0A9D500 /* Pods-PWAReactNativeWrapper.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper/Pods-PWAReactNativeWrapper.staging.xcconfig"; sourceTree = "<group>"; };
 		C4707A0D368C608722EB8C7F /* Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.debug.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests/Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C71152E82461A4720040BB05 /* PWAReactNativeWrapper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PWAReactNativeWrapper-Bridging-Header.h"; sourceTree = "<group>"; };
 		C71152EB2461A5FD0040BB05 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71152ED2461A66C0040BB05 /* libReact-RCTBlob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTBlob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71152EF2461A6770040BB05 /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +165,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				C71152E82461A4720040BB05 /* PWAReactNativeWrapper-Bridging-Header.h */,
 			);
 			name = PWAReactNativeWrapper;
 			sourceTree = "<group>";

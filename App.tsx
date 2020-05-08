@@ -34,7 +34,7 @@ export default class App extends React.PureComponent<AppProps> {
     }`;
     let props = {
       ...this.props,
-      userAgent: `${DeviceInfo.getUserAgent()} webRTCAdapterEnabled ${postfixString}`,
+      userAgent: `${DeviceInfo.getUserAgentSync()} webRTCAdapterEnabled ${postfixString}`,
       enableMixedContentMode: interpolateYayNay(
         this.props.enableMixedContentMode,
       ),
