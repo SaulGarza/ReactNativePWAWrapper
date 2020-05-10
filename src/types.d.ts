@@ -23,6 +23,7 @@ type Props = {
     backgroundColor: string;
     spinner: string;
   };
+  SafariLinkingDisallowed3rdPartyUrls: string[];
   domainOriginTestPattern?: string;
   url: string;
   audioQuality: AudioQuality;

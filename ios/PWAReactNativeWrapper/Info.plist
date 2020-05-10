@@ -28,14 +28,6 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>localhost</key>
-			<dict>
-				<key>NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
-		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Coop Dreams requests geolocation to provide a customized experience</string>
@@ -55,6 +47,12 @@
 	<false/>
 	<key>WebRCTApplicationConfig</key>
 	<dict>
+		<key>SafariLinkingDisallowed3rdPartyUrls</key>
+		<array>
+			<string>connect.facebook.net</string>
+			<string>amazonaws.com</string>
+			<string>facebook.com</string>
+		</array>
 		<key>audioQuality</key>
 		<string>${AudioQuality}</string>
 		<key>barStyle</key>

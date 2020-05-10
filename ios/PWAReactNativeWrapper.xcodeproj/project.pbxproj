@@ -637,7 +637,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SL9WL2F89D;
 				DisableWebpageZoom = YES;
-				DomainOriginTestPattern = "https://coopdreams.getvoxi.app";
+				DomainOriginTestPattern = "https://twochicksandahammer.getvoxi.app";
 				Fullscreen = YES;
 				FullscreenWhenOffline = YES;
 				HEADER_SEARCH_PATHS = (
@@ -663,6 +663,7 @@
 				UAPostfixExtraData = "";
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
+				WebRCTAdapterSettingURL = "https://twochicksandahammer.getvoxi.app";
 				XCodeSchemesLowercase = release;
 			};
 			name = Release;

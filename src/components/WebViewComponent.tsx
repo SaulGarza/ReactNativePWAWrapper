@@ -224,6 +224,8 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
           ref={(component) => this.webView = component}
           source={{ uri: this.props.url }}
           allowFileAccess
+          allowsBackForwardNavigationGestures
+          allowsFullscreenVideo
           startInLoadingState
           allowsInlineMediaPlayback
           mediaPlaybackRequiresUserAction={false}
@@ -247,7 +249,10 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
               this.props.domainOriginTestPattern &&
               url.indexOf(this.props.domainOriginTestPattern) === -1
             ) {
-              this.webView.stopLoading()
+              const disallowedUrls = this.props.SafariLinkingDisallowed3rdPartyUrls
+              for(let i = disallowedUrls.length; i--;) {
+                if(url.indexOf(disallowedUrls[i]) !== -1) return true
+              }
               Linking.canOpenURL(url).then((supported) => {
                 if (!supported) {
                   if(__DEV__) {
