@@ -11,8 +11,6 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		19FF58E5CED64AD98A0D5468 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2012C69A3CDD4F589EA0421C /* libRNDeviceInfo-tvOS.a */; };
-		2BD8810F466748E292B0B578 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 707C0DE05F774158A7EA4D44 /* libRNDeviceInfo.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -39,27 +37,12 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "PWAReactNativeWrapper-tvOS";
 		};
-		C70F4B4E22BAC03600F63EF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1058B0490BF84BF79D6A1D65 /* RNDeviceInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DA5891D81BA9A9FC002B4DB2;
-			remoteInfo = RNDeviceInfo;
-		};
-		C70F4B5022BAC03600F63EF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1058B0490BF84BF79D6A1D65 /* RNDeviceInfo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E72EC1401F7ABB5A0001BC90;
-			remoteInfo = "RNDeviceInfo-tvOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PWAReactNativeWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAReactNativeWrapperTests.m; sourceTree = "<group>"; };
-		1058B0490BF84BF79D6A1D65 /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNDeviceInfo.xcodeproj; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; };
 		107C6638D6F57915489DE091 /* libPods-PWAReactNativeWrapper-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PWAReactNativeWrapper-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1128EB59A928D1E75DA5EF0A /* Pods-PWAReactNativeWrapperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapperTests.debug.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapperTests/Pods-PWAReactNativeWrapperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PWAReactNativeWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWAReactNativeWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +53,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PWAReactNativeWrapper/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PWAReactNativeWrapper/main.m; sourceTree = "<group>"; };
 		18FF62945A60D3CA97B2478B /* Pods-PWAReactNativeWrapperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapperTests.release.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapperTests/Pods-PWAReactNativeWrapperTests.release.xcconfig"; sourceTree = "<group>"; };
-		2012C69A3CDD4F589EA0421C /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; };
 		2662773B01090EE0BD38E5C9 /* libPods-PWAReactNativeWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PWAReactNativeWrapper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* PWAReactNativeWrapper-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PWAReactNativeWrapper-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* PWAReactNativeWrapper-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PWAReactNativeWrapper-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +61,6 @@
 		563E602173245E7405F5FE75 /* libPods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65AD169ECFBD35BE9BD949F3 /* Pods-PWAReactNativeWrapper-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOSTests/Pods-PWAReactNativeWrapper-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E02812211DCE3B092D5C5EF /* Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests/Pods-PWAReactNativeWrapper-PWAReactNativeWrapperTests.staging.xcconfig"; sourceTree = "<group>"; };
-		707C0DE05F774158A7EA4D44 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		9373D10D8376467199C926AA /* libReactNativeAudioToolkit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeAudioToolkit.a; sourceTree = "<group>"; };
 		9F9DEC44ABB3C9F6E00D3ED2 /* Pods-PWAReactNativeWrapper-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOS/Pods-PWAReactNativeWrapper-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		A4E3809642AD50F165562B97 /* Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig"; path = "Target Support Files/Pods-PWAReactNativeWrapper-tvOSTests/Pods-PWAReactNativeWrapper-tvOSTests.staging.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +74,7 @@
 		C71152EB2461A5FD0040BB05 /* libReact-Core.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-Core.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71152ED2461A66C0040BB05 /* libReact-RCTBlob.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTBlob.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71152EF2461A6770040BB05 /* libReact-RCTAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libReact-RCTAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C72BD3BE2468AD7900E60FB7 /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79DF4B422E15FC2000AFAE0 /* offline_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = offline_image.png; sourceTree = "<group>"; };
 		C79DF4B522E15FC2000AFAE0 /* offline_image@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offline_image@3x.png"; sourceTree = "<group>"; };
 		C79DF4B622E15FC2000AFAE0 /* offline_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "offline_image@2x.png"; sourceTree = "<group>"; };
@@ -111,7 +93,6 @@
 				C71152EC2461A5FD0040BB05 /* libReact-Core.a in Frameworks */,
 				C71152EE2461A66C0040BB05 /* libReact-RCTBlob.a in Frameworks */,
 				C71152F02461A6770040BB05 /* libReact-RCTAnimation.a in Frameworks */,
-				2BD8810F466748E292B0B578 /* libRNDeviceInfo.a in Frameworks */,
 				AC1D66C82C1B63627F0C63EA /* libPods-PWAReactNativeWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,7 +103,6 @@
 			files = (
 				ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */,
-				19FF58E5CED64AD98A0D5468 /* libRNDeviceInfo-tvOS.a in Frameworks */,
 				8197F7442C31DB318E729654 /* libPods-PWAReactNativeWrapper-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +174,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C72BD3BE2468AD7900E60FB7 /* libRNDeviceInfo.a */,
 				C71152EF2461A6770040BB05 /* libReact-RCTAnimation.a */,
 				C71152ED2461A66C0040BB05 /* libReact-RCTBlob.a */,
 				C71152EB2461A5FD0040BB05 /* libReact-Core.a */,
@@ -211,7 +192,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				1058B0490BF84BF79D6A1D65 /* RNDeviceInfo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -246,20 +226,9 @@
 		C70F4B1C22BAC03600F63EF8 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				707C0DE05F774158A7EA4D44 /* libRNDeviceInfo.a */,
-				2012C69A3CDD4F589EA0421C /* libRNDeviceInfo-tvOS.a */,
 				9373D10D8376467199C926AA /* libReactNativeAudioToolkit.a */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		C70F4B4A22BAC03600F63EF8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C70F4B4F22BAC03600F63EF8 /* libRNDeviceInfo.a */,
-				C70F4B5122BAC03600F63EF8 /* libRNDeviceInfo-tvOS.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C79DF4B322E15FC2000AFAE0 /* assets */ = {
@@ -369,12 +338,6 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C70F4B4A22BAC03600F63EF8 /* Products */;
-					ProjectRef = 1058B0490BF84BF79D6A1D65 /* RNDeviceInfo.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* PWAReactNativeWrapper */,
@@ -383,23 +346,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C70F4B4F22BAC03600F63EF8 /* libRNDeviceInfo.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNDeviceInfo.a;
-			remoteRef = C70F4B4E22BAC03600F63EF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C70F4B5122BAC03600F63EF8 /* libRNDeviceInfo-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libRNDeviceInfo-tvOS.a";
-			remoteRef = C70F4B5022BAC03600F63EF8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
@@ -590,7 +536,8 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = SL9WL2F89D;
 				DisableWebpageZoom = YES;
-				DomainOriginTestPattern = herokuapp;
+				DomainOriginTestPattern = "https://twochicksandahammer.getvoxi.app";
+				ENABLE_BITCODE = NO;
 				Fullscreen = YES;
 				FullscreenWhenOffline = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -600,7 +547,6 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = PWAReactNativeWrapper/Info.plist;
@@ -622,6 +568,7 @@
 				UAPostfixExtraData = "";
 				UAPostfixSettingVersion = 0.5;
 				VERSIONING_SYSTEM = "apple-generic";
+				WebRCTAdapterSettingURL = "https://twochicksandahammer.getvoxi.app";
 				XCodeSchemesLowercase = debug;
 			};
 			name = Debug;
@@ -638,11 +585,11 @@
 				DEVELOPMENT_TEAM = SL9WL2F89D;
 				DisableWebpageZoom = YES;
 				DomainOriginTestPattern = "https://twochicksandahammer.getvoxi.app";
+				ENABLE_BITCODE = NO;
 				Fullscreen = YES;
 				FullscreenWhenOffline = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = PWAReactNativeWrapper/Info.plist;
@@ -683,7 +630,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOS/Info.plist";
@@ -716,7 +662,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOS/Info.plist";
@@ -748,7 +693,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOSTests/Info.plist";
@@ -780,7 +724,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOSTests/Info.plist";
@@ -1002,11 +945,11 @@
 				DEVELOPMENT_TEAM = SL9WL2F89D;
 				DisableWebpageZoom = YES;
 				DomainOriginTestPattern = "https://demo.getvoxi.app";
+				ENABLE_BITCODE = NO;
 				Fullscreen = YES;
 				FullscreenWhenOffline = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)/include",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
@@ -1061,7 +1004,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOS/Info.plist";
@@ -1093,7 +1035,6 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-audio-toolkit/ios/ReactNativeAudioToolkit/**",
 				);
 				INFOPLIST_FILE = "PWAReactNativeWrapper-tvOSTests/Info.plist";

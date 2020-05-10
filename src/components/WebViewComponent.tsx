@@ -13,7 +13,6 @@ import {
   WebViewMessageEventData,
   Image,
   Linking,
-  LinkingIOS,
   Alert,
 } from 'react-native';
 import generateStyles from '../styles';
@@ -24,7 +23,6 @@ import CustomOfflineComponent from './CustomOfflineComponent'
 import { AudioRecorder, AudioUtils } from 'react-native-audio'
 import { WebView } from 'react-native-webview'
 import { AppConstants } from '../types'
-import { WebViewNavigation } from 'react-native-webview/lib/WebViewTypes';
 
 const offlineImage = require('../assets/offline_image.png')
 
@@ -91,7 +89,6 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
     }
 
     AudioRecorder.onFinished = (data) => {
-      // console.log("finished recording!", data)
       if (Platform.OS === 'ios') {
         this.finishRecording(data.status === "OK", data.base64);
       } else {
@@ -113,7 +110,6 @@ export default class WebViewContainer extends Component<AppConstants, IState> {
   }
 
   private record() {
-    // console.log('recording!')
     if(!this.state.hasPermission) {
       AudioRecorder.requestAuthorization().then((isAuthorized) => {
         this.setState(
