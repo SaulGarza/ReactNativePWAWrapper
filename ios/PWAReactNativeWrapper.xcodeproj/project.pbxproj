@@ -565,8 +565,9 @@
 				SWIFT_VERSION = 5.0;
 				StatusBarOfflineStyle = "";
 				StatusBarStyle = "light-content";
-				UAPostfixExtraData = "";
-				UAPostfixSettingVersion = 0.5;
+				UAPostfixExtraData = GetVoxiIOSApp;
+				UAPostfixSettingBuildVersion = 202005100;
+				UAPostfixSettingVersion = 1.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				WebRCTAdapterSettingURL = "https://twochicksandahammer.getvoxi.app";
 				XCodeSchemesLowercase = debug;
@@ -607,8 +608,9 @@
 				SWIFT_VERSION = 5.0;
 				StatusBarOfflineStyle = "";
 				StatusBarStyle = "light-content";
-				UAPostfixExtraData = "";
-				UAPostfixSettingVersion = 0.5;
+				UAPostfixExtraData = GetVoxiIOSApp;
+				UAPostfixSettingBuildVersion = 202005100;
+				UAPostfixSettingVersion = 1.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				WebRCTAdapterSettingURL = "https://twochicksandahammer.getvoxi.app";
 				XCodeSchemesLowercase = release;
@@ -981,8 +983,9 @@
 				SWIFT_VERSION = 5.0;
 				StatusBarOfflineStyle = "";
 				StatusBarStyle = "light-content";
-				UAPostfixExtraData = "";
-				UAPostfixSettingVersion = 0.5;
+				UAPostfixExtraData = GetVoxiIOSApp;
+				UAPostfixSettingBuildVersion = 202005100;
+				UAPostfixSettingVersion = 1.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				WebRCTAdapterSettingURL = "https://demo.getvoxi.app";
 				XCodeSchemesLowercase = staging;

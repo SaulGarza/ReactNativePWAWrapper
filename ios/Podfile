@@ -102,6 +102,7 @@ target 'PWAReactNativeWrapper' do
 
   pod 'react-native-webview', :path => '../node_modules/react-native-webview'
   pod 'RNAudio', :path => '../node_modules/react-native-audio'
+  pod 'RNDeviceInfo', :podspec => '../node_modules/react-native-device-info/RNDeviceInfo.podspec'
 
   use_native_modules!
 

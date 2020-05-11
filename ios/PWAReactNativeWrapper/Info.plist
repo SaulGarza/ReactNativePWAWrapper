@@ -82,6 +82,8 @@
 		<string>${StatusBarOfflineStyle}</string>
 		<key>postfix</key>
 		<dict>
+			<key>build_version</key>
+			<string>${UAPostfixSettingBuildVersion}</string>
 			<key>app_id</key>
 			<string>${UAPostfixSettingAppId}</string>
 			<key>other_postfix</key>

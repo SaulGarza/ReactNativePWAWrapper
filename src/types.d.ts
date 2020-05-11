@@ -37,6 +37,7 @@ export type AppProps = {
     app_id: string;
     version?: string;
     other_postfix?: string;
+    build_version?: string;
   };
   enableMixedContentMode: StringBool;
   pushMobileWebpageMeta: StringBool;
